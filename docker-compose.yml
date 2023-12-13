@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  backend:
+    container_name: mern-backend
+    image: backy
+    build: ./backend
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+    environment:
+      - DB_URL=mongodb://mongo:27017/mern-stack
+      
+  frontend:
+    container_name: mern-frontend
+    image: fronty
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:4000
+
+
+  mongo:
+    container_name: mongo-database
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    environment:
+      - MONGO_INITDB_DATABASE=mern-stack
+    ports:
+      - "27017:27017"
+    volumes:
+      - type: bind
+        source: ./data # host
+        target: /data/db # container
+

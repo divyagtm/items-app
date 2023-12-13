@@ -1,0 +1,8 @@
+backend package.json:     "mongoose": "^7.4.1",
+
+
+.env chahidaina
+
+
+
+docker-compose --build

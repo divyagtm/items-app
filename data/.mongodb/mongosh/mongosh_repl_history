@@ -1,0 +1,26 @@
+db.items.find()
+db.items.insertOne({ username: "post title 2", name: "budlight.", price: 30, quantity: 2 })
+db.items.insertOne({ username: "post title 1", name: "body of post.", price: 40, quantity: 1 })
+show collections
+use mern-stack
+show dbs;
+db.items.find()
+db.items.insertOne({ username: "Post Title 1", name: "Body of post.", price: 400, quantity: 1 })
+db.items.find()
+select * from items;
+show collections
+use mern-stack
+show dbs;
+show collections;
+db.createCollection("items")
+show collections;
+show collection
+show dbs;
+use mern-stack
+show dbs;
+clear
+mongosh -u user -p pass --authenticationDatabase admin;
+mongo -u user -p pass --authenticationDatabase admin;
+mongo -u user -p pass --authenticationDatabase admin
+mongosh -u user -p
+show dbs
